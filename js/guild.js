@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const apiUrl = "http://localhost:3000/api";
+  const apiUrl = "https://desafio-fullstack-rpg-backend.onrender.com/api";
   const guildModal = document.getElementById("guildModal");
   const guildForm = document.getElementById("guildForm");
   const addGuildBtn = document.getElementById("addGuildBtn");
