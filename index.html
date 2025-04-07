@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de Players e Guilda</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar_items">
+        <img src="/frontend/imgs/Swords.png" alt="" />
+        <a href="index.html">Players</a>
+      </div>
+      <div class="navbar_items">
+        <img
+          style="padding: 0px 0px 8px 0px"
+          src="/frontend/imgs/guilds.png"
+          alt=""
+        />
+        <a href="guild.html">Guilds</a>
+      </div>
+    </nav>
+    <div class="content_text_main">
+      <h1>Players Cadastrados</h1>
+      <img src="/frontend/imgs/esmeralda.png" alt="" />
+    </div>
+    <div class="button_add">
+      <button id="addPlayerBtn">Adicionar player</button>
+    </div>
+
+    <table id="playerTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Level</th>
+          <th>Class</th>
+          <th>Equipment</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar player -->
+    <div id="playerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitlePlayer">Adicionar Player</h2>
+        <form id="playerForm">
+          <label for="namePlayer">Name:</label>
+          <input type="text" id="namePlayer" name="name" required />
+
+          <label for="classPlayer">Class:</label>
+          <select id="classPlayer" name="classPlayer" required>
+            <option value="warrior">Warrior</option>
+            <option value="mage">Mage</option>
+            <option value="assasin">Assassin</option>
+            <option value="necromancer">Necromancer</option>
+          </select>
+
+          <label for="equipament">Equipment:</label>
+          <input type="text" id="equipament" name="equipament" required />
+
+          <label for="level">Level:</label>
+          <input type="number" id="level" name="level" required />
+
+          <button class="button_save_modal" type="submit" id="savePlayerBtn">
+            Salvar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/player.js"></script>
+  </body>
+</html>

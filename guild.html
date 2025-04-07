@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gerenciamento de Players e Guilda</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar_items">
+        <img src="/frontend/imgs/Swords.png" alt="" />
+        <a href="index.html">Players</a>
+      </div>
+      <div class="navbar_items">
+        <img
+          style="padding: 0px 0px 8px 0px"
+          src="/frontend/imgs/guilds.png"
+          alt=""
+        />
+        <a href="guild.html">Guilds</a>
+      </div>
+    </nav>
+    <div class="content_text_main">
+      <h1>Guildas</h1>
+      <img src="/frontend/imgs/esmeralda.png" alt="" />
+    </div>
+    <div class="button_add">
+      <button id="addGuildBtn">Adicionar guilda</button>
+    </div>
+
+    <table id="guildTable">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Servidor</th>
+          <th>Players</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Conteúdo dinâmico -->
+      </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar guild -->
+    <div id="guildModal" class="modal">
+      <div class="modal-content">
+        <span class="close-guild">&times;</span>
+        <h2 id="modalTitleGuild">Adicionar Guilda</h2>
+        <form id="guildForm">
+          <input
+            type="text"
+            id="guildName"
+            placeholder="Nome da guilda"
+            required
+          />
+          <input type="text" id="guildServer" placeholder="Servidor" required />
+
+          <label for="guildPlayers">Selecionar Players:</label>
+          <select
+            id="guildPlayers"
+            name="guildPlayers"
+            multiple
+            required
+          ></select>
+
+          <button type="submit">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/guild.js"></script>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=MedievalSharp&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0000006b;
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(80, 60, 30, 0.05),
+      transparent 30%
+    ),
+    radial-gradient(circle at 80% 80%, rgba(100, 60, 40, 0.05), transparent 30%),
+    linear-gradient(145deg, #1a1a1a, #0d0d0d),
+    url("https://www.transparenttextures.com/patterns/dark-mosaic.png"); /* textura sutil */
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #e0e0e0;
+  color: #d9ae58;
+  font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ebbd61;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Menu de navegação */
+.navbar {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #0f0d07;
+  color: #d9ae58;
+  border: #d9ae58 1px solid;
+  height: 60px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #d9ae58;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar :hover {
+  background: linear-gradient(to bottom, #333, #111);
+  transition: 200ms;
+  color: white;
+}
+
+.button_add {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_add > button {
+  background: linear-gradient(to bottom, #722f37, #4a1f23);
+  font-family: "Cinzel Decorative", serif;
+  color: #f3e5ab;
+  width: 200px;
+  height: 50px;
+  font-family: "MedievalSharp", cursive;
+  font-size: 20px;
+  border: 2px solid #a17c4c;
+  border-radius: 8px;
+  text-shadow: 1px 1px #000;
+  box-shadow: 0 0 10px rgba(161, 124, 76, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilo para o modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(80, 60, 30, 0.05),
+      transparent 30%
+    ),
+    radial-gradient(circle at 80% 80%, rgba(100, 60, 40, 0.05), transparent 30%),
+    linear-gradient(145deg, #1a1a1a, #0d0d0d),
+    url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+  table,
+  th,
+  td {
+    font-size: 14px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  button {
+    padding: 8px 10px;
+  }
+
+  .navbar a {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.navbar_items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar_items > img {
+  width: 32px;
+  height: 32px;
+  align-items: center;
+}
+.content_text_main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.content_text_main > img {
+  width: 60px;
+  height: 65px;
+}
+.button_save_modal {
+  background: linear-gradient(to bottom, #722f37, #4a1f23);
+  text-shadow: 1px 1px #000;
+  box-shadow: 0 0 10px rgba(161, 124, 76, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+input {
+  padding: 3px;
+  border: #a17c4c 1px solid;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+select {
+  background-color: black;
+  color: #d9ae58;
+  padding: 3px;
+  border: #a17c4c 1px solid;
+  border-radius: 5px;
+}
+
+.editGuildBtn,
+.deleteGuildBtn,
+.editPlayerBtn,
+.deletePlayerBtn {
+  background: linear-gradient(to bottom, #333, #111);
+  color: #f3e5ab;
+  border: 2px solid #a17c4c;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 0 5px;
+  font-family: "Cinzel Decorative", serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.text-table {
+  color: white;
+}
